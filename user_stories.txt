@@ -1,12 +1,14 @@
-AAU, I want to view a list of all flights (index view) that displays each flight’s airline, airport, flight no., and departure date/time.
+AAU, I want to view a list of all flights (index view) that displays each flight’s airline, airport, flight no., and departure date/time. -DONE
 
-AAU, I want to create a flight by entering the information on a new view that has a form. When I submit the form I should be taken back to all the flights.
+AAU, I want to create a flight by entering the information on a new view that has a form. When I submit the form I should be taken back to all the flights. -DONE
 
 - AAU, I want to be able to access each view via a navigation bar at the top of the page with links to:
     - `ALL FLIGHTS`, and
     - `ADD FLIGHT`
+-DONE
 
 AAU, I want to be able to delete a flight from the list on the index view.
+-DONE
 
 
 AAU, I want to be able to click on a flight to view its details on a show view.
