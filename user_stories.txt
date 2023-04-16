@@ -11,6 +11,6 @@ AAU, I want to be able to delete a flight from the list on the index view.
 -DONE
 
 
-AAU, I want to be able to click on a flight to view its details on a show view.
+AAU, I want to be able to click on a flight to view its details on a show view. -DONE
 
-AAU, I want to be able to click a button WITHIN the show view that brings me to an edit view where I can adjust a flight’s details.  When I save these changes, they should persist to the database and redirect me back to the flight’s show view.
+AAU, I want to be able to click a button WITHIN the show view that brings me to an edit view where I can adjust a flight’s details.  When I save these changes, they should persist to the database and redirect me back to the flight’s show view. 
