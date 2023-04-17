@@ -15,12 +15,17 @@ function index(req, res) {
 }
 
 function newFlight(req, res) {
+  const newFlight = new Flight()
+  console.log(newFlight,'newFlight')
   res.render('flights/new', {
     title: 'Add Flight'
   })
 }
 
 function create(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
   Flight.create(req.body)
   .then(flight => {
     res.redirect('/flights')
@@ -84,6 +89,25 @@ function update(req, res) {
   })
 }
 
+function createReview(req,res) {
+  Flight.findById(req.params.flightId)
+  .then (flight =>{
+    flight.tickets.push(req.body)
+    flight.save()
+    .then(()=>{
+      res.redirect(`/flights/${flight._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 
 export{
   index,
@@ -92,5 +116,6 @@ export{
   deleteFlight as delete,
   show,
   edit,
-  update
+  update,
+  createReview,
 }
