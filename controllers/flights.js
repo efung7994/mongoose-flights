@@ -89,7 +89,7 @@ function update(req, res) {
   })
 }
 
-function createReview(req,res) {
+function createTicket(req,res) {
   Flight.findById(req.params.flightId)
   .then (flight =>{
     flight.tickets.push(req.body)
@@ -117,5 +117,5 @@ export{
   show,
   edit,
   update,
-  createReview,
+  createTicket,
 }
