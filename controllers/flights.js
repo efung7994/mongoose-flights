@@ -66,7 +66,7 @@ function edit(req, res) {
   .then(flight => {
     res.render('flights/edit', {
       flight: flight,
-      title: 'Edit Movie'
+      title: 'Edit Flight'
     })
   })
   .catch(err => {
